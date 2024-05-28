@@ -5,7 +5,13 @@ package Http;
 import "google/protobuf/any.proto";
 
 enum CMD {
-	Login = 0;
+	Register = 0;
+	Login = 1;
+}
+
+enum CODE {
+	Success = 0;
+	Failed = 1;
 }
 
 message Request {
@@ -15,7 +21,7 @@ message Request {
 
 message Response {
 	CMD cmd = 1;
-	int32 code = 2;
+	CODE code = 2;
 	string msg = 3;
 	google.protobuf.Any body = 4;
 }

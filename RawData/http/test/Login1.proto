@@ -1,8 +1,0 @@
-syntax="proto3";
-
-package Http;
-
-message LoginReq {
-	string account = 1;
-	string pwd = 2;
-}
