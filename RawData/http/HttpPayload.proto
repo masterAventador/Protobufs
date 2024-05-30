@@ -16,12 +16,12 @@ enum CODE {
 
 message Request {
 	CMD cmd = 1;
-	google.protobuf.Any body = 2;
+	google.protobuf.Any payload = 2;
 }
 
 message Response {
 	CMD cmd = 1;
 	CODE code = 2;
 	string msg = 3;
-	google.protobuf.Any body = 4;
+	google.protobuf.Any payload = 4;
 }
