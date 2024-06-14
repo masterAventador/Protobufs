@@ -1,0 +1,26 @@
+syntax="proto3";
+
+package PHM; // PB_HTTP_MODULE
+
+//--------------------CMD = Register-------------
+
+message Register {
+	string account = 1; // 账号
+	string pwd = 2; // 密码
+	int32 phoneNum = 3; // 验证码
+}
+
+message RegisterResp {
+	string token = 1; // 登录凭证
+}
+
+
+//--------------------CMD = Login----------------
+message Login {
+	string account = 1; // 账号
+	string pwd_md5 = 2; // 做了MD5的密码
+}
+
+message LoginResp {
+	string token = 1; // 登录凭证
+}

@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+package PHM; // PB_HTTP_MODULE
+
+import "google/protobuf/any.proto";
+
+enum cmd { 
+	/***************注册*****************/
+	register = 0; 
+	/***************登录*****************/
+	login = 1;
+}
+
+enum code {
+	success = 0;
+	failed = 1;
+}
+
+message request {
+	cmd cmd = 1;
+	google.protobuf.Any payload = 2;
+}
+
+message response {
+	code code = 1;
+	string msg = 2;
+	google.protobuf.Any payload = 3;
+}
